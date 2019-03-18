@@ -8,7 +8,7 @@ describe('random routes', () => {
     return request(app)
       .get('/random')
       .then(res => {
-        expect(res.body).toEqual();
+        expect(res.body).toHaveLength(100);
       });
   }
   );

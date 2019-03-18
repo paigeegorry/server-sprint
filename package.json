@@ -1,0 +1,41 @@
+{
+  "name": "server-sprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "jest --verbose --runInBand --detectOpenHandles",
+    "test:watch": "jest --watch --verbose --runInBand --detectOpenHandles",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "seed": "node seed.js",
+    "drop": "mongo hummingbird --eval 'db.dropDatabase()'",
+    "db-load-all": "npm run drop && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paigeegorry/server-sprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paigeegorry/server-sprint/issues"
+  },
+  "homepage": "https://github.com/paigeegorry/server-sprint#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "mongoose": "^5.4.19"
+  },
+  "devDependencies": {
+    "chance": "^1.0.18",
+    "eslint": "^5.15.1",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.0"
+  }
+}

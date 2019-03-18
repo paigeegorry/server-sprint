@@ -11,7 +11,7 @@
     "start": "node server.js",
     "start:watch": "nodemon server.js",
     "seed": "node seed.js",
-    "drop": "mongo hummingbird --eval 'db.dropDatabase()'",
+    "drop": "mongo server-sprint --eval 'db.dropDatabase()'",
     "db-load-all": "npm run drop && npm run seed"
   },
   "repository": {
